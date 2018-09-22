@@ -8,7 +8,8 @@ For this tutorial, you'll need:
 * [An AWS Cloud9 Account](https://aws.amazon.com/cloud9/)
 * [A GitHub Account](https://github.com/join)
 * [RubyGems](http://rubygems.org/pages/download)
-* Basic knowledge of the command line and HTML/CSS. 
+
+*Helpful (but not required): Basic knowledge of the command line, HTML/CSS, and Ruby.*
 
 ### Step 1 :: Create Your Workspace
 Login to Cloud9 and click "Create a new workspace". The workspace should use the Ruby template. 
