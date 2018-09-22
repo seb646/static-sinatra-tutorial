@@ -9,7 +9,7 @@ For this tutorial, you'll need:
 * [A GitHub Account](https://github.com/join)
 * [RubyGems](http://rubygems.org/pages/download)
 
-*Helpful (but not required): Basic knowledge of the command line, HTML/CSS, and Ruby.*
+Helpful (but not required): Basic knowledge of the command line, HTML/CSS, and Ruby.
 
 ### Step 1 :: Create Your Workspace
 Login to Cloud9 and click "Create a new workspace". The workspace should use the Ruby template. 
