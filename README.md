@@ -203,25 +203,25 @@ I like to contain things like images and CSS within a folder called "assets". So
 Open the "style.css" file and copy/paste the following:
 
  ```CSS
- .avatar-background{
-  background: #eee;
-  padding: 50px;
-  border-radius: 900px;
-  width: 300px;
-  height: 300px;
-  transition: 0.3s;
+.avatar-background{
+	background: #eee;
+	padding: 50px;
+	border-radius: 900px;
+	width: 300px;
+	height: 300px;
+	transition: 0.3s;
 }
 
 .avatar-background:hover{
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-  transition: 0.3s;
-  background: #f7f7f7;
-  cursor: pointer;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+	transition: 0.3s;
+	background: #f7f7f7;
+	cursor: pointer;
 }
 
 .avatar-background.active{
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-  background: #d0e0ff;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+	background: #d0e0ff;
 }
 
 .avatar{
