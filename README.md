@@ -255,7 +255,7 @@ Once the directory is created, you should see this:
 
  ![GitHub Init Repo](https://image.ibb.co/byPwj9/Screen_Shot_2018_09_22_at_5_33_03_PM.png)
  
-Next, initialize Cloud9 for Git. Within the "static-sinatra" folder, type:
+Next, initialize Git for Cloud9. Within the "static-sinatra" folder, type:
 
 	$ git init
 	$ git add . 
