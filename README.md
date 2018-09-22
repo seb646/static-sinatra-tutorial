@@ -44,7 +44,7 @@ set :static, true
 set :bind, '0.0.0.0'
 
 get '/' do
-  	"Welcome to Sinatra!" 
+	"Welcome to Sinatra!" 
 end	
 ```
 
@@ -69,7 +69,7 @@ The first thing we need to do is create a folder to store our content. Within th
 Next we need to change the route in "app.rb" configuration file. The route automatically searches for files within the "views" folder. Replace lines 7-9 with: 
 
 	get '/' do
-    	erb :index
+		erb :index
 	end
 
 After that, we need to create our "layout.erb" file to use as a template for our website. ERB is a server template that allows us to embed Ruby within our HTML. For the purpose of this tutorial, we'll use Bootstrap to theme the website. 
@@ -225,17 +225,17 @@ Open the "style.css" file and copy/paste the following:
 }
 
 .avatar{
-  width: 200px;
+	width: 200px;
 }
 
 .hidden{
-  display: none;
-  transition: 0.3s;
+	display: none;
+	transition: 0.3s;
 }
 
 .visible{
-  display: visible !important;
-  transition: 0.3s;
+	display: visible !important;
+	transition: 0.3s;
 }
  ```
  
