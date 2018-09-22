@@ -44,7 +44,7 @@ set :static, true
 set :bind, '0.0.0.0'
 
 get '/' do
-	"Welcome to Sinatra!" 
+    "Welcome to Sinatra!" 
 end	
 ```
 
@@ -69,7 +69,7 @@ The first thing we need to do is create a folder to store our content. Within th
 Next we need to change the route in "app.rb" configuration file. The route automatically searches for files within the "views" folder. Replace lines 7-9 with: 
 
 	get '/' do
-		erb :index
+	    erb :index
 	end
 
 After that, we need to create our "layout.erb" file to use as a template for our website. ERB is a server template that allows us to embed Ruby within our HTML. For the purpose of this tutorial, we'll use Bootstrap to theme the website. 
@@ -83,50 +83,50 @@ Next, copy/paste the following into the "layout.erb" file:
 ```html
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Robot, Lion, Eagle</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="/assets/style.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>Robot, Lion, Eagle</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/assets/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
         
 <body>
     <%= yield %>
        
-	<script>
-	$("#robot").click(function() {
-		$("#robot-selected").removeClass("hidden");
-		$(this).addClass("active");
-		$("#lion-selected").addClass("hidden");
-		$("#eagle-selected").addClass("hidden");
-		$("#lion").removeClass("active");
-		$("#eagle").removeClass("active");
-	});
-	$("#lion").click(function() {
-		$("#lion-selected").removeClass("hidden");
-		$(this).addClass("active");
-		$("#robot-selected").addClass("hidden");
-		$("#eagle-selected").addClass("hidden");
-		$("#eagle").removeClass("active");
-		$("#robot").removeClass("active");
-	});
-	$("#eagle").click(function() {
-		$("#eagle-selected").removeClass("hidden");
-		$(this).toggleClass("active");
-		$("#lion-selected").addClass("hidden");
-		$("#robot-selected").addClass("hidden");
-		$("#lion").removeClass("active");
-		$("#robot").removeClass("active");
-	});
-	$("#clear-selection").click(function() {
-		$("#eagle-selected").addClass("hidden");
-		$("#lion-selected").addClass("hidden");
-		$("#robot-selected").addClass("hidden");
-		$("#lion").removeClass("active");
-		$("#robot").removeClass("active");
-		$("#eagle").removeClass("active");
-	});
-	</script>
+    <script>
+    $("#robot").click(function() {
+        $("#robot-selected").removeClass("hidden");
+        $(this).addClass("active");
+        $("#lion-selected").addClass("hidden");
+	$("#eagle-selected").addClass("hidden");
+	$("#lion").removeClass("active");
+	$("#eagle").removeClass("active");
+    });
+    $("#lion").click(function() {
+        $("#lion-selected").removeClass("hidden");
+        $(this).addClass("active");
+        $("#robot-selected").addClass("hidden");
+        $("#eagle-selected").addClass("hidden");
+        $("#eagle").removeClass("active");
+        $("#robot").removeClass("active");
+    });
+    $("#eagle").click(function() {
+        $("#eagle-selected").removeClass("hidden");
+        $(this).toggleClass("active");
+        $("#lion-selected").addClass("hidden");
+        $("#robot-selected").addClass("hidden");
+        $("#lion").removeClass("active");
+        $("#robot").removeClass("active");
+    });
+    $("#clear-selection").click(function() {
+        $("#eagle-selected").addClass("hidden");
+        $("#lion-selected").addClass("hidden");
+        $("#robot-selected").addClass("hidden");
+        $("#lion").removeClass("active");
+        $("#robot").removeClass("active");
+        $("#eagle").removeClass("active");
+    });
+    </script>
 </body>
 </html>
 ```
@@ -204,38 +204,38 @@ Open the "style.css" file and copy/paste the following:
 
  ```CSS
 .avatar-background{
-	background: #eee;
-	padding: 50px;
-	border-radius: 900px;
-	width: 300px;
-	height: 300px;
-	transition: 0.3s;
+    background: #eee;
+    padding: 50px;
+    border-radius: 900px;
+    width: 300px;
+    height: 300px;
+    transition: 0.3s;
 }
 
 .avatar-background:hover{
-	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-	transition: 0.3s;
-	background: #f7f7f7;
-	cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transition: 0.3s;
+    background: #f7f7f7;
+    cursor: pointer;
 }
 
 .avatar-background.active{
-	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-	background: #d0e0ff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    background: #d0e0ff;
 }
 
 .avatar{
-	width: 200px;
+    width: 200px;
 }
 
 .hidden{
-	display: none;
-	transition: 0.3s;
+    display: none;
+    transition: 0.3s;
 }
 
 .visible{
-	display: visible !important;
-	transition: 0.3s;
+    display: visible !important;
+    transition: 0.3s;
 }
  ```
  
