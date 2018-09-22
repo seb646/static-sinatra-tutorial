@@ -57,7 +57,7 @@ To test your instance of Sinatra, type:
 You should see this:
 ![Init Sinatra](https://image.ibb.co/hhqDCU/Screen_Shot_2018_09_22_at_4_39_19_PM.png)
 
-Congratulations, you've just created your first Sinatra web application! To terminate the web server's process, type ```CTRL + C```. 
+Congratulations, you've just created your first Sinatra web app! To terminate the process, type ```CTRL + C```. 
 
 ### Step 4 :: Create Your Website
 To build a website using things like HTML/CSS and JavaScript, we'll need to configure Sinatra to use a "views" folder for templating. 
@@ -82,52 +82,52 @@ Next, copy/paste the following into the "layout.erb" file:
 
 ```html
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Robot, Lion, Eagle</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="/assets/style.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    </head>
+<head>
+	<meta charset="utf-8">
+	<title>Robot, Lion, Eagle</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="/assets/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
         
-    <body>
-       <center><%= yield %></center>
+<body>
+    <%= yield %>
        
-	   <script>
-			$("#robot").click(function() {
-				$("#robot-selected").removeClass("hidden");
-				$(this).addClass("active");
-				$("#lion-selected").addClass("hidden");
-				$("#eagle-selected").addClass("hidden");
-				$("#lion").removeClass("active");
-				$("#eagle").removeClass("active");
-			});
-			$("#lion").click(function() {
-				$("#lion-selected").removeClass("hidden");
-				$(this).addClass("active");
-				$("#robot-selected").addClass("hidden");
-				$("#eagle-selected").addClass("hidden");
-				$("#eagle").removeClass("active");
-				$("#robot").removeClass("active");
-			});
-			$("#eagle").click(function() {
-				$("#eagle-selected").removeClass("hidden");
-				$(this).toggleClass("active");
-				$("#lion-selected").addClass("hidden");
-				$("#robot-selected").addClass("hidden");
-				$("#lion").removeClass("active");
-				$("#robot").removeClass("active");
-			});
-			$("#clear-selection").click(function() {
-				$("#eagle-selected").addClass("hidden");
-				$("#lion-selected").addClass("hidden");
-				$("#robot-selected").addClass("hidden");
-				$("#lion").removeClass("active");
-				$("#robot").removeClass("active");
-				$("#eagle").removeClass("active");
-			});
-		</script>
-    </body>
+	<script>
+	$("#robot").click(function() {
+		$("#robot-selected").removeClass("hidden");
+		$(this).addClass("active");
+		$("#lion-selected").addClass("hidden");
+		$("#eagle-selected").addClass("hidden");
+		$("#lion").removeClass("active");
+		$("#eagle").removeClass("active");
+	});
+	$("#lion").click(function() {
+		$("#lion-selected").removeClass("hidden");
+		$(this).addClass("active");
+		$("#robot-selected").addClass("hidden");
+		$("#eagle-selected").addClass("hidden");
+		$("#eagle").removeClass("active");
+		$("#robot").removeClass("active");
+	});
+	$("#eagle").click(function() {
+		$("#eagle-selected").removeClass("hidden");
+		$(this).toggleClass("active");
+		$("#lion-selected").addClass("hidden");
+		$("#robot-selected").addClass("hidden");
+		$("#lion").removeClass("active");
+		$("#robot").removeClass("active");
+	});
+	$("#clear-selection").click(function() {
+		$("#eagle-selected").addClass("hidden");
+		$("#lion-selected").addClass("hidden");
+		$("#robot-selected").addClass("hidden");
+		$("#lion").removeClass("active");
+		$("#robot").removeClass("active");
+		$("#eagle").removeClass("active");
+	});
+	</script>
+</body>
 </html>
 ```
 
