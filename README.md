@@ -1,7 +1,7 @@
 # Tutorial: Create and Deploy a Sinatra Wesite With Heroku
 [![Build Stable](https://img.shields.io/badge/build-stable-brightgreen.svg "Build Stable")](https://static-sinatra-tutorial.herokuapp.com/) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg "MIT License")](https://github.com/seb646/static-sinatra-tutorial/blob/master/LICENSE) 
 
-This tutorial demonstrates how to create a static website using Ruby's [Sinatra framework](http://sinatrarb.com/). We will create a static three character selection system through Sinatra with some JavaScript functionality. At the end of this tutorial, we'll show you how to upload the project to both GitHub and Heroku. 
+This tutorial demonstrates how to create a static website using Ruby's [Sinatra framework](http://sinatrarb.com/). We will create a static three character selection system with JavaScript functionality. At the end of this tutorial, we'll show you how to upload the project to both GitHub and deploy it to Heroku. 
 
 Live Demo: [https://static-sinatra-tutorial.herokuapp.com/](https://static-sinatra-tutorial.herokuapp.com/)
 
