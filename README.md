@@ -313,7 +313,15 @@ Now install the Heroku gem, Heroku's CLI assets, and Node:
 We'll also need to move the files we've just installed so they're usable on our system:
 
 	$ sudo mv /usr/local/bin/heroku /usr/local/rvm/rubies/ruby-2.4.4/bin/heroku 
+
+The last thing we need to do is create a Procfile to tell Heroku what commands to execute on start. Type:
+
+	$ touch Procfile
 	
+Copy/paste the following into your Procfile:
+
+	web: bundle exec ruby app.rbgit add -f app.rb Gemfile Gemfile.lock config.ru
+
 We can now connect to Heroku:
 
 	$ heroku login
@@ -324,7 +332,7 @@ Once you've authenticated, we can create our Heroku project:
 	
 Before we push our application to Heroku, we need to tell Git stop ignoring our configuration files and then commit our changes:
 
-	$ git add -f app.rb Gemfile Gemfile.lock config.ru
+	$ git add -f app.rb Gemfile Gemfile.lock config.ru Procfile
 	$ git commit -am "heroku commit"
 	
 And finally we can push our Sinatra web app to Heroku:
