@@ -1,8 +1,7 @@
 # Ruby Sinatra Static Wesite Turotial
 This tutorial demonstrates how to create a static website using Ruby's Sinatra framework. We will create a static three character selection system through Sinatra with some JavaScript functionality. At the end of this tutorial, we'll show you how to upload the project to both GitHub and Heroku. 
 
-## Getting Started 
-### Prerequisites
+## Prerequisites
 For this tutorial, you'll need: 
 
 * [An AWS Cloud9 Account](https://aws.amazon.com/cloud9/)
@@ -11,12 +10,12 @@ For this tutorial, you'll need:
 
 Helpful (but not required): Basic knowledge of the command line, HTML/CSS, and Ruby.
 
-### Step 1 :: Create Your Workspace
+## Step 1 :: Create Your Workspace
 Login to Cloud9 and click "Create a new workspace". The workspace should use the Ruby template. 
 
 ![Workspace Screenshot](https://image.ibb.co/dL8GXU/Screen_Shot_2018_09_22_at_4_08_42_PM.png)
 
-### Step 2 :: Install Sinatra
+## Step 2 :: Install Sinatra
 
 Sinata is a lightweight Ruby web framework that helps us easily deploy our website.
 
@@ -30,7 +29,7 @@ Before we create an instance of Sinatra, we need to make sure we're using Ruby 4
 	$ rvm --default use 2.4.4
 	$ ruby -v
 
-### Step 3 :: Setup Sinatra 
+## Step 3 :: Setup Sinatra 
 Once Sinatra is installed, we need to create a directory to contain our project. 
 	
 	$ mkdir static-sinatra
@@ -65,7 +64,7 @@ You should see this:
 
 Congratulations, you've just created your first Sinatra web app! To terminate the process, type ```CTRL + C```. 
 
-### Step 4 :: Create Your Website
+## Step 4 :: Create Your Website
 To build a website using things like HTML/CSS and JavaScript, we'll need to configure Sinatra to use a "views" folder for templating. 
 
 The first thing we need to do is create a folder to store our content. Within the "static-sinatra" folder, type the follwing into your colsole: 
@@ -254,7 +253,7 @@ We're now ready to run and test our application! Within our home "static-sinatra
  ![Final Product](https://image.ibb.co/gnggHU/Screen_Shot_2018_09_22_at_5_40_01_PM.png)
  
 
-### Step 5 :: Upload to GitHub
+## Step 5 :: Upload to GitHub
 To upload our project onto GitHub, we need to first create a repository. Login to your GitHub account and navigate to https://github.com/new. Name the directory whatever you'd like, but _do not_ initialize it with a ReadMe. 
 
 Once the directory is created, you should see this: 
@@ -278,7 +277,7 @@ And finally we can now push our files to GitHUb:
 	
 You'll see a prompt for your GitHub username and password. Once authenticated, the "static-sinatra" folder and files should all be visible on GitHub! 
 
-### Step 6 :: Deploy to Heroku
+## Step 6 :: Deploy to Heroku
 Heroku allows us to run the site on a webpage that is accessible on the web. Before we get started, we need to create a few files to configure the deployment.
 
 First, we need a "config.ru" file. This sets basic the basic paramaters and requirements for the Sinatra application. Within the "static-sinatra" folder, type:
