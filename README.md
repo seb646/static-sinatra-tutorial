@@ -321,7 +321,7 @@ The last thing we need to do is create a Procfile to tell Heroku what commands t
 	
 Copy/paste the following into your Procfile:
 
-	web: bundle exec ruby app.rbgit add -f app.rb Gemfile Gemfile.lock config.ru
+	web: bundle exec ruby app.rb
 	
 Before we connect, we need to remove some Cloud9 specific configuration in Sinatra. Open "app.rb" and replace the contents with:
 
@@ -343,7 +343,7 @@ Once you've authenticated, we can create our Heroku project:
 	
 Before we push our application to Heroku, we need to tell Git stop ignoring our configuration files and then commit our changes:
 
-	$ git add -f app.rb Gemfile Gemfile.lock config.ru Procfile
+	$ git add -f Gemfile Gemfile.lock config.ru Procfile
 	$ git commit -am "heroku commit"
 	
 And finally we can push our Sinatra web app to Heroku:
