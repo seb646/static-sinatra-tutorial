@@ -1,7 +1,7 @@
 # Tutorial: Create and Deploy a Sinatra Wesite With Heroku
 [![Build Stable](https://img.shields.io/badge/build-stable-brightgreen.svg "Build Stable")](https://static-sinatra-tutorial.herokuapp.com/) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg "MIT License")](https://github.com/seb646/static-sinatra-tutorial/blob/master/LICENSE) 
 
-This tutorial demonstrates how to create a static website using Ruby's Sinatra framework. We will create a static three character selection system through Sinatra with some JavaScript functionality. At the end of this tutorial, we'll show you how to upload the project to both GitHub and Heroku. 
+This tutorial demonstrates how to create a static website using Ruby's [Sinatra framework](http://sinatrarb.com/). We will create a static three character selection system through Sinatra with some JavaScript functionality. At the end of this tutorial, we'll show you how to upload the project to both GitHub and Heroku. 
 
 Live Demo: [https://static-sinatra-tutorial.herokuapp.com/](https://static-sinatra-tutorial.herokuapp.com/)
 
@@ -81,7 +81,7 @@ Next we need to change the route in "app.rb" configuration file. The route autom
 	    erb :index
 	end
 
-After that, we need to create our "layout.erb" file to use as a template for our website. ERB is a server template that allows us to embed Ruby within our HTML. For the purpose of this tutorial, we'll use Bootstrap to theme the website. 
+After that, we need to create our "layout.erb" file to use as a template for our website. ERB is a server template that allows us to embed Ruby within our HTML. For the purpose of this tutorial, we'll use [Bootstrap](http://getbootstrap.com/) to theme the website. 
 
 Create the "layout.erb" file within the "views" folder: 
 
