@@ -1,5 +1,5 @@
 # Ruby Sinatra Static Wesite Turotial
-This tutorial demonstrates how to create a static website using Ruby's Sinatra framework. We will create a static three character selection system through Sinatra with some JavaScript functionality. 
+This tutorial demonstrates how to create a static website using Ruby's Sinatra framework. We will create a static three character selection system through Sinatra with some JavaScript functionality. At the end of this tutorial, we'll show you how to upload the project to both GitHub and Heroku. 
 
 ## Getting Started 
 ### Prerequisites
@@ -7,7 +7,7 @@ For this tutorial, you'll need:
 
 * [An AWS Cloud9 Account](https://aws.amazon.com/cloud9/)
 * [A GitHub Account](https://github.com/join)
-* [RubyGems](http://rubygems.org/pages/download)
+* [A Heroku Account](https://heroku.com) 
 
 Helpful (but not required): Basic knowledge of the command line, HTML/CSS, and Ruby.
 
@@ -24,6 +24,11 @@ To install Sinatra, we're going to use RubyGems:
 	
 	$ gem install sinatra
 
+Before we create an instance of Sinatra, we need to make sure we're using Ruby 4.4.4. so that the application will be compatible with Heroku. To update Ruby, we'll use Ruby Version Manager (RVM): 
+
+	$ rvm install 2.4.4
+	$ rvm --default use 2.4.4
+	$ ruby -v
 
 ### Step 3 :: Setup Sinatra 
 Once Sinatra is installed, we need to create a directory to contain our project. 
@@ -35,7 +40,7 @@ Next, we need to create an instance of Sinatra within our project folder. To do 
 
 	$ touch app.rb
 	
-You should see the app.rb file appear in the file tree to the left of the text editor. Click on the file and copy/paste the following configurations and routes:
+You should see the "app.rb" file appear in the file tree to the left of the text editor. Click on the file and copy/paste the following configurations and routes:
 
 ```ruby
 require 'sinatra'
@@ -272,3 +277,56 @@ And finally we can now push our files to GitHUb:
 	$ git push origin master
 	
 You'll see a prompt for your GitHub username and password. Once authenticated, the "static-sinatra" folder and files should all be visible on GitHub! 
+
+### Step 6 :: Deploy to Heroku
+Heroku allows us to run the site on a webpage that is accessible on the web. Before we get started, we need to create a few files to configure the deployment.
+
+First, we need a "config.ru" file. This sets basic the basic paramaters and requirements for the Sinatra application. Within the "static-sinatra" folder, type:
+
+	$ touch config.ru
+	
+The "config.ru" file should contain:
+
+```ruby
+require 'rubygems'
+require 'sinatra'
+require './app'
+run Sinatra::Application
+```
+
+Next, we need to greate a "Gemfile" file (case sensitive). This tells Heroku about the Gems we have installed. 
+
+	$ bundle init
+
+Replace the contents of "Gemfile" with:	
+```ruby
+source 'https://rubygems.org'
+ruby '2.4.4'
+gem 'sinatra'
+```
+Now install the Heroku gem, Heroku's CLI assets, and Node: 
+
+	$ sudo gem install heroku
+	$ curl https://cli-assets.heroku.com/install.sh | sh
+	$ nvm install 8.9.1
+	
+We'll also need to move the files we've just installed so they're usable on our system:
+
+	$ sudo mv /usr/local/bin/heroku /usr/local/rvm/rubies/ruby-2.4.4/bin/heroku 
+	
+We can now connect to Heroku:
+
+	$ heroku login
+	
+Once you've authenticated, we can create our Heroku project: 
+
+	$ create heroku PROJECT-NAME buildpack heroku/ruby
+	
+Before we push our application to Heroku, we need to tell Git stop ignoring our configuration files and then commit our changes:
+
+	$ git add -f app.rb Gemfile Gemfile.lock config.ru
+	$ git commit -am "heroku commit"
+	
+And finally we can push our Sinatra web app to Heroku:
+
+	$ git push heroku master 
