@@ -104,25 +104,25 @@ Next, copy/paste the following into the "layout.erb" file:
        
     <script>
     $("#robot").click(function() {
-        $("#robot-selected").removeClass("hidden");
         $(this).addClass("active");
+        $("#robot-selected").removeClass("hidden");
         $("#lion-selected").addClass("hidden");
         $("#eagle-selected").addClass("hidden");
         $("#lion").removeClass("active");
         $("#eagle").removeClass("active");
     });
     $("#lion").click(function() {
-        $("#lion-selected").removeClass("hidden");
         $(this).addClass("active");
+        $("#lion-selected").removeClass("hidden");
         $("#robot-selected").addClass("hidden");
         $("#eagle-selected").addClass("hidden");
         $("#eagle").removeClass("active");
         $("#robot").removeClass("active");
     });
     $("#eagle").click(function() {
+        $(this).toggleClass("active");
         $("#eagle-selected").removeClass("hidden");
         $("#robot-selected").addClass("hidden");
-        $(this).toggleClass("active");
         $("#lion-selected").addClass("hidden");
         $("#robot").removeClass("active");
         $("#lion").removeClass("active");
