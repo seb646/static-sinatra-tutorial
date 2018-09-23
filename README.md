@@ -321,6 +321,16 @@ The last thing we need to do is create a Procfile to tell Heroku what commands t
 Copy/paste the following into your Procfile:
 
 	web: bundle exec ruby app.rbgit add -f app.rb Gemfile Gemfile.lock config.ru
+	
+Before we connect, we need to remove some Cloud9 specific configuration in Sinatra. Open "app.rb" and replace the contents with:
+
+```ruby
+require 'sinatra'
+
+get '/' do
+    erb :index
+end
+```
 
 We can now connect to Heroku:
 
