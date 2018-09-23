@@ -1,5 +1,9 @@
 # Ruby Sinatra Static Wesite Turotial
+![Build Stable](https://img.shields.io/badge/build-stable-brightgreen.svg "Build Stable") [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg "MIT License")](https://github.com/seb646/url-shortener/blob/master/LICENSE.md) 
+
 This tutorial demonstrates how to create a static website using Ruby's Sinatra framework. We will create a static three character selection system through Sinatra with some JavaScript functionality. At the end of this tutorial, we'll show you how to upload the project to both GitHub and Heroku. 
+
+Live Demo: [https://static-sinatra-tutorial.herokuapp.com/](https://static-sinatra-tutorial.herokuapp.com/)
 
 ### Prerequisites
 For this tutorial, you'll need: 
