@@ -288,8 +288,6 @@ First, we need a "config.ru" file. This sets basic the basic paramaters and requ
 The "config.ru" file should contain:
 
 ```ruby
-require 'rubygems'
-require 'sinatra'
 require './app'
 run Sinatra::Application
 ```
