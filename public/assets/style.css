@@ -15,7 +15,7 @@
 }
 
 .avatar-background.active{
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
   background: #d0e0ff;
 }
 
@@ -25,10 +25,5 @@
 
 .hidden{
   display: none;
-  transition: 0.3s;
-}
-
-.visible{
-  display: visible !important;
   transition: 0.3s;
 }

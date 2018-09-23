@@ -107,9 +107,9 @@ Next, copy/paste the following into the "layout.erb" file:
         $("#robot-selected").removeClass("hidden");
         $(this).addClass("active");
         $("#lion-selected").addClass("hidden");
-	$("#eagle-selected").addClass("hidden");
-	$("#lion").removeClass("active");
-	$("#eagle").removeClass("active");
+        $("#eagle-selected").addClass("hidden");
+        $("#lion").removeClass("active");
+        $("#eagle").removeClass("active");
     });
     $("#lion").click(function() {
         $("#lion-selected").removeClass("hidden");
@@ -121,11 +121,11 @@ Next, copy/paste the following into the "layout.erb" file:
     });
     $("#eagle").click(function() {
         $("#eagle-selected").removeClass("hidden");
+        $("#robot-selected").addClass("hidden");
         $(this).toggleClass("active");
         $("#lion-selected").addClass("hidden");
-        $("#robot-selected").addClass("hidden");
-        $("#lion").removeClass("active");
         $("#robot").removeClass("active");
+        $("#lion").removeClass("active");
     });
     $("#clear-selection").click(function() {
         $("#eagle-selected").addClass("hidden");
@@ -239,11 +239,6 @@ Open the "style.css" file and copy/paste the following:
 
 .hidden{
     display: none;
-    transition: 0.3s;
-}
-
-.visible{
-    display: visible !important;
     transition: 0.3s;
 }
  ```
