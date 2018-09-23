@@ -1,7 +1,7 @@
 # Ruby Sinatra Static Wesite Turotial
 This tutorial demonstrates how to create a static website using Ruby's Sinatra framework. We will create a static three character selection system through Sinatra with some JavaScript functionality. At the end of this tutorial, we'll show you how to upload the project to both GitHub and Heroku. 
 
-## Prerequisites
+### Prerequisites
 For this tutorial, you'll need: 
 
 * [An AWS Cloud9 Account](https://aws.amazon.com/cloud9/)
